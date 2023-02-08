@@ -1,5 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
+import AddToDoForm from './components/AddToDoForm';
 
 function App() {
   return (
@@ -7,6 +8,7 @@ function App() {
       <h1>
         My ToDo List
       </h1>
+      <AddToDoForm />
     </div>
   );
 }
