@@ -1,7 +1,7 @@
 # to_do_app
 React redux todo app of a todo app using redux toolkit, learning about the different parts that make up redux, how to structure state, and how to call data from an API.
           
-<img src="#" width="500" height="650" alt="to_do_app">             
+<img src="https://github.com/ShaviyaVictor/to_do_app/blob/main/public/Screenshot%20from%202023-02-08%2017-41-41.png?raw=true" width="750" height="650" alt="to_do_app">             
 
 ## Built With
 
