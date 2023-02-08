@@ -2,6 +2,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import AddToDoForm from './components/AddToDoForm';
 import ToDoList from './components/ToDoList';
+import TotalCompletedToDos from './components/TotalCompletedToDos';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       </h1>
       <AddToDoForm />
       <ToDoList />
+      <TotalCompletedToDos />
     </div>
   );
 }
