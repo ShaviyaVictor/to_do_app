@@ -1,5 +1,5 @@
 import React from "react";
-import { Form, Button } from 'react-bootstrap/Form';
+import { Form, Button } from 'react-bootstrap';
 
 const ToDoItem = ({ id, title, completed }) => {
 
@@ -9,10 +9,9 @@ const ToDoItem = ({ id, title, completed }) => {
 
       <div className="d-flex justify-content-between">
         <span className="d-flex align-items-center">
-          <Form.Group className="mb-3 mr-3" controlId="formBasicCheckbox">
-            <Form.Check type="checkbox" checked={completed} />
+          <Form.Group controlId="formBasicCheckbox">
+            <Form.Check type="checkbox" checked={completed} label={title} />
           </Form.Group>
-          {title}
         </span>
         <Button variant="danger" type="submit">
           Delete
