@@ -11,14 +11,12 @@ const AddToDoForm = () => {
   };
 
   return (
-    <Form onSubmit={onSubmit} className='form-inline mt-4 mb-4'>
+    <Form onSubmit={onSubmit} className='mt-4 mb-4'>
 
       <Row>
+        
         <Col xs={10}>
           <Form.Group className="mb-3">
-            {/* <Form.Label className="sr-only">
-              Title:
-            </Form.Label> */}
             <Form.Control 
               type="text" 
               placeholder="Add your todo..." 
@@ -27,7 +25,7 @@ const AddToDoForm = () => {
               onChange={(event) => setValue(event.target.value)}
             />
             <Form.Text className="text-muted">
-              Spare your mind some trouble.
+              Spare your mind some trouble and add it to the list!
             </Form.Text>
           </Form.Group>
         </Col>
