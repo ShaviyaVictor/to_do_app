@@ -11,12 +11,15 @@ const AddToDoForm = () => {
 
   const onSubmit = (event) => {
     event.preventDefault();
-    console.log("Client entered: " + value);
     
     dispatch(
       addTodo({
         title: value,
-      }))
+      })
+    );
+    
+    console.log("Client entered: " + value);
+
   };
 
   return (
