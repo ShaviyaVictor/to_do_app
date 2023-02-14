@@ -9,6 +9,7 @@ const toDoSlice = createSlice({
     { id: 3, title: 'todo3', completed: true }
   ],
   reducers: {
+
     addTodo: (state, action) => {
       const newTodo = {
         id: Date.now(),
@@ -17,6 +18,12 @@ const toDoSlice = createSlice({
       };
       state.push(newTodo);
     },
+    toggleComplete: (state, action) => {
+      const index = state.findIndex(
+        (todo) => todo.id === action.payload.id
+      );
+    }
+
   },
 
 });
