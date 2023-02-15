@@ -9,7 +9,7 @@ const TotalCompletedToDos = () => {
 
   return (
     <h5 className="mt-4">
-      Total Completed ToDos: 2
+      Total Completed ToDos: {completedTodos.length}
     </h5>
   )
 };
