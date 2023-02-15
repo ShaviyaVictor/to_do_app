@@ -17,7 +17,11 @@ const ToDoItem = ({ id, title, completed }) => {
   };
 
   const handleDeleteClick = () => {
-    
+    dispatch(
+      deleteTodo({
+        id: id,
+      })
+    )
   };
 
   return (
@@ -34,8 +38,13 @@ const ToDoItem = ({ id, title, completed }) => {
               label={title} />
           </Form.Group>
         </span>
-        <Button variant="danger" type="submit">
+        <Button 
+          variant="danger" 
+          type="submit"
+          onClick={handleDeleteClick} >
+
           Delete
+          
         </Button>
       </div>
 
