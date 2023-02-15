@@ -6,11 +6,14 @@ import { toggleComplete } from "../redux/toDoSlice";
 const ToDoItem = ({ id, title, completed }) => {
 
   const dispatch = useDispatch();
+  
   const handleCompleteClick = () => {
-    dispatch(toggleComplete({
-      id: id,
-      completed: !completed
-    }))
+    dispatch(
+      toggleComplete({
+        id: id,
+        completed: !completed
+      })
+    )
   };
 
   return (
