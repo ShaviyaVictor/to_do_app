@@ -1,12 +1,12 @@
 import React from "react";
 import { Form, Button } from 'react-bootstrap';
 import { useDispatch } from "react-redux";
-import { toggleComplete } from "../redux/toDoSlice";
+import { toggleComplete, deleteTodo } from "../redux/toDoSlice";
 
 const ToDoItem = ({ id, title, completed }) => {
 
   const dispatch = useDispatch();
-  
+
   const handleCompleteClick = () => {
     dispatch(
       toggleComplete({
@@ -14,6 +14,10 @@ const ToDoItem = ({ id, title, completed }) => {
         completed: !completed
       })
     )
+  };
+
+  const handleDeleteClick = () => {
+    
   };
 
   return (
