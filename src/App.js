@@ -6,7 +6,7 @@ import TotalCompletedToDos from './components/TotalCompletedToDos';
 
 function App() {
   return (
-    <div className="container bg-white p-4 mt-5">
+    <div className="container bg-white p-4 mt-2">
       <h1>
         My ToDo List
       </h1>
