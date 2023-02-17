@@ -19,7 +19,10 @@ const ToDoList = () => {
     <ul className="list-group">
 
       {todos.map((todo) => (
-        <ToDoItem id={todo.id} title={todo.title} completed={todo.completed}/>
+        <ToDoItem 
+          id={todo.id} 
+          title={todo.title} 
+          completed={todo.completed}/>
       ))}
 
     </ul>
