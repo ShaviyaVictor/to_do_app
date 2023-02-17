@@ -1,5 +1,6 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 
+// thunk action logic to fetch the payload from the api
 const getTodosAsync = createAsyncThunk(
   'todos/getTodosAsync', 
   async() => {
@@ -44,6 +45,8 @@ const toDoSlice = createSlice({
         (todo) => todo.id !== action.payload.id
       );
     },
+
+    // thunk reducer logic
 
   },
 
