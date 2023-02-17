@@ -48,8 +48,10 @@ const toDoSlice = createSlice({
 
     // thunk reducer logic
     extraReducers: {
-      
-    }
+      [getTodosAsync.fulfilled]: (state, action) => {
+        return action.payload.todos;
+      },
+    },
 
   },
 
