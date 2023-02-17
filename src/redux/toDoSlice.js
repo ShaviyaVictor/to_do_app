@@ -1,7 +1,7 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 
 // thunk action logic to fetch the payload from the api
-const getTodosAsync = createAsyncThunk(
+export const getTodosAsync = createAsyncThunk(
   'todos/getTodosAsync', 
   async() => {
     const response = await fetch('http://localhost:7000/todos');
