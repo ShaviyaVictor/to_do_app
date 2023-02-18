@@ -8,7 +8,7 @@ export const getTodosAsync = createAsyncThunk(
 
     if(response.ok) {
       const todos = await response.json();
-      return { todos }
+      return { todos };
     }
     
   }
@@ -17,13 +17,7 @@ export const getTodosAsync = createAsyncThunk(
 const toDoSlice = createSlice({
   
   name: 'todos',
-  initialState: [
-    { id: 1, title: 'Todo1', completed: false },
-    { id: 2, title: 'Todo2', completed: true },
-    { id: 3, title: 'Todo3', completed: false },
-    { id: 4, title: 'Todo4', completed: true },
-    { id: 5, title: 'Todo5', completed: false },
-  ],
+  initialState: [ ],
   reducers: {
 
     addTodo: (state, action) => {
@@ -46,11 +40,18 @@ const toDoSlice = createSlice({
       );
     },
 
-    // thunk reducer logic
-    extraReducers: {
-      [getTodosAsync.fulfilled]: (state, action) => {
-        return action.payload.todos;
-      },
+  },
+
+  // thunk reducer logic
+  extraReducers: {
+
+    [getTodosAsync.pending]: (state, action) => {
+      console.log("Fetching data from the API...")
+    },
+
+    [getTodosAsync.fulfilled]: (state, action) => {
+      console.log("Data has been fetched from the API...")
+      return action.payload.todos;
     },
 
   },
