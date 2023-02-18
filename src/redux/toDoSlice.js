@@ -1,6 +1,6 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 
-// thunk action logic to fetch the payload from the api
+// thunk middleware logic with the action that uses fetch function to get the payload from the api
 export const getTodosAsync = createAsyncThunk(
   'todos/getTodosAsync', 
   async() => {
