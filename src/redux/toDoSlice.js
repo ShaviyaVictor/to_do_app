@@ -116,7 +116,12 @@ const toDoSlice = createSlice({
       state.push(action.payload.todo);
     },
 
+    // toggle completed actions reducers
+    [toggleCompleteAsync.pending]: (state, action) => {
+      console.log('Action detected. Onto it...')
+    },
     [toggleCompleteAsync.fulfilled]: (state, action) => {
+      console.log('SUCCESS: Toggle action completed')
       const index = state.findIndex(
         (todo) => todo.id === action.payload.id
       );
