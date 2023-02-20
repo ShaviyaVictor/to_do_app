@@ -41,15 +41,14 @@ export const toggleCompleteAsync = createAsyncThunk(
   'todos/toggleCompleteAsync',
   async(payload) => {
     const response = await fetch('http://localhost:7000/todos/${payload.id}', {
-        method: 'PATCH',
-        headers: {
-          'Content-type': 'application/json',
-        },
-        body: JSON.stringify({
-          completed: payload.completed
-        })
-      }
-    );
+      method: 'PATCH',
+      headers: {
+        'Content-type': 'application/json',
+      },
+      body: JSON.stringify({
+        completed: payload.completed
+      })
+    });
   }
 );
 
