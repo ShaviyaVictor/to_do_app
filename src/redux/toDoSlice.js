@@ -49,6 +49,15 @@ export const toggleCompleteAsync = createAsyncThunk(
         completed: payload.completed
       })
     });
+
+    if(response.ok) {
+      const todo = await response.json();
+      return {
+        id: todo.id,
+        completed: todo.completed
+      }
+    }
+
   }
 );
 
