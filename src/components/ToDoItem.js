@@ -2,14 +2,24 @@ import React from "react";
 import { Form, Button } from 'react-bootstrap';
 import { useDispatch } from "react-redux";
 import { toggleComplete, deleteTodo } from "../redux/toDoSlice";
+import { toggleCompleteAsync } from "../redux/toDoSlice";
 
 const ToDoItem = ({ id, title, completed }) => {
 
   const dispatch = useDispatch();
 
   const handleCompleteClick = () => {
+    // dispatch function that bypasses the thunk 
+    // dispatch(
+    //   toggleComplete({
+    //     id: id,
+    //     completed: !completed
+    //   })
+    // )
+
+    // dispatch function through the thunk 
     dispatch(
-      toggleComplete({
+      toggleCompleteAsync({
         id: id,
         completed: !completed
       })
