@@ -27,6 +27,12 @@ export const addTodoAsync = createAsyncThunk(
         title: payload.title
       })
     });
+
+    if(response.ok) {
+      const todo = await response.json();
+      return { todo };
+    }
+
   } 
 );
 
