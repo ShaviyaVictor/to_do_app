@@ -61,6 +61,17 @@ export const toggleCompleteAsync = createAsyncThunk(
   }
 );
 
+// thunk to delete todos from the api 
+export const deleteTodoAsync = createAsyncThunk(
+  'todos/deleteTodoAsync', 
+  async(payload) => {
+    const response = await fetch(`http://localhost:7000/todos/${payload.id}`, {
+      method: 'DELETE',
+    });
+    
+  }
+);
+
 const toDoSlice = createSlice({
   
   name: 'todos',
