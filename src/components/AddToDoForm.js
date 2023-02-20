@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import { Button, Form, Row, Col } from "react-bootstrap";
 import { useDispatch } from "react-redux";
-import { addTodo } from "../redux/toDoSlice";
+// import { addTodo } from "../redux/toDoSlice";
+import { addTodoAsync } from "../redux/toDoSlice";
+
 
 const AddToDoForm = () => {
 
@@ -12,11 +14,19 @@ const AddToDoForm = () => {
   const onSubmit = (event) => {
     event.preventDefault();
     
+    // dispatching earlier action bypassing the thunk
+    // dispatch(
+    //   addTodo({
+    //     title: value,
+    //   })
+    // );
+
+    // dispatching the action through the thunk
     dispatch(
-      addTodo({
+      addTodoAsync({
         title: value,
       })
-    );
+    )
     
     console.log("Client entered: " + value);
 
