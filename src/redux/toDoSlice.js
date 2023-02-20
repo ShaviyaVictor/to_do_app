@@ -83,6 +83,13 @@ const toDoSlice = createSlice({
     },
 
     // add todo reducers
+    [addTodoAsync.pending]: (state, action) => {
+      console.log('AT WORK: Request received!');
+    },
+    [addTodoAsync.fulfilled]: (state, action) => {
+      console.log('SUCCESS: The new todo has been added.');
+      state.push(action.payload.todo);
+    },
 
   },
 
