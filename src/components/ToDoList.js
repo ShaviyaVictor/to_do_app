@@ -7,12 +7,12 @@ const ToDoList = () => {
 
   const dispatch = useDispatch();
 
-  const todos = useSelector((state) => state.todos);
-
   useEffect(() => {
     dispatch(getTodosAsync());
   }, [dispatch]);
 
+  const todos = useSelector((state) => state.todos);
+  
   // const todos = [
   //   { id: 1, title: 'Todo1', completed: false },
   //   { id: 2, title: 'Todo2', completed: true },

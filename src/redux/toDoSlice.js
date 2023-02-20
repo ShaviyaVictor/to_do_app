@@ -14,6 +14,14 @@ export const getTodosAsync = createAsyncThunk(
   }
 );
 
+// thunk to add todos to the api
+export const addTodoAsync = createAsyncThunk(
+  'todos/addTodoAsync',
+  async(payload) => {
+    
+  } 
+);
+
 const toDoSlice = createSlice({
   
   name: 'todos',
