@@ -73,14 +73,16 @@ const toDoSlice = createSlice({
   // thunk reducer logic
   extraReducers: {
 
+    // get todos reducers
     [getTodosAsync.pending]: (state, action) => {
       console.log("Fetching data from the API...")
     },
-
     [getTodosAsync.fulfilled]: (state, action) => {
       console.log("Data has been fetched from the API...")
       return action.payload.todos;
     },
+
+    // add todo reducers
 
   },
 
