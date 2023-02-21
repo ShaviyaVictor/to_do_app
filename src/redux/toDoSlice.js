@@ -70,7 +70,9 @@ export const deleteTodoAsync = createAsyncThunk(
     });
     if(response.ok) {
       const todos = await response.json();
-      return { todos };
+      return { 
+        id: payload.id
+       };
     }
 
   }
