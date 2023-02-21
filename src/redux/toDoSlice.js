@@ -69,7 +69,6 @@ export const deleteTodoAsync = createAsyncThunk(
       method: 'DELETE',
     });
     if(response.ok) {
-      const todos = await response.json();
       return { 
         id: payload.id
        };
