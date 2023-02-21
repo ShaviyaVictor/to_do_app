@@ -2,7 +2,7 @@ import React from "react";
 import { Form, Button } from 'react-bootstrap';
 import { useDispatch } from "react-redux";
 import { toggleComplete, deleteTodo } from "../redux/toDoSlice";
-import { toggleCompleteAsync } from "../redux/toDoSlice";
+import { toggleCompleteAsync, deleteTodoAsync } from "../redux/toDoSlice";
 
 const ToDoItem = ({ id, title, completed }) => {
 
@@ -27,8 +27,13 @@ const ToDoItem = ({ id, title, completed }) => {
   };
 
   const handleDeleteClick = () => {
+    // dispatch(
+    //   deleteTodo({
+    //     id: id,
+    //   })
+    // )
     dispatch(
-      deleteTodo({
+      deleteTodoAsync({
         id: id,
       })
     )
