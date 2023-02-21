@@ -95,29 +95,29 @@ const toDoSlice = createSlice({
     // { id: 4, title: 'Todo4', completed: true },
     // { id: 5, title: 'Todo5', completed: false },
   ],
-  reducers: {
+  // reducers: {
 
-    addTodo: (state, action) => {
-      const newTodo = {
-        id: Date.now(),
-        title: action.payload.title,
-        completed: false
-      };
-      state.push(newTodo);
-    },
-    toggleComplete: (state, action) => {
-      const index = state.findIndex(
-        (todo) => todo.id === action.payload.id
-      );
-      state[index].completed = action.payload.completed;
-    },
-    deleteTodo: (state, action) => {
-      return state.filter(
-        (todo) => todo.id !== action.payload.id
-      );
-    },
+  //   addTodo: (state, action) => {
+  //     const newTodo = {
+  //       id: Date.now(),
+  //       title: action.payload.title,
+  //       completed: false
+  //     };
+  //     state.push(newTodo);
+  //   },
+  //   toggleComplete: (state, action) => {
+  //     const index = state.findIndex(
+  //       (todo) => todo.id === action.payload.id
+  //     );
+  //     state[index].completed = action.payload.completed;
+  //   },
+  //   deleteTodo: (state, action) => {
+  //     return state.filter(
+  //       (todo) => todo.id !== action.payload.id
+  //     );
+  //   },
 
-  },
+  // },
   
   // thunk reducer logic
   extraReducers: {
@@ -167,10 +167,10 @@ const toDoSlice = createSlice({
 
 });
 
-export const { 
-  addTodo,
-  toggleComplete, 
-  deleteTodo, 
-} = toDoSlice.actions;
+// export const { 
+//   addTodo,
+//   toggleComplete, 
+//   deleteTodo, 
+// } = toDoSlice.actions;
 
 export default toDoSlice.reducer;
