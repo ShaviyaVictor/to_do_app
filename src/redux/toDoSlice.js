@@ -75,6 +75,15 @@ export const deleteTodoAsync = createAsyncThunk(
 
   }
 );
+// alternative to the above thunk 
+// export const deleteTodoAsync = createAsyncThunk(
+//   'todos/deleteTodoAsync',
+//   async(payload) => {
+//     return await fetch(`http://localhost:7000/todos/${payload.id}`, {
+//       method: 'DELETE',
+//     })
+//   }
+// );
 
 const toDoSlice = createSlice({
   
