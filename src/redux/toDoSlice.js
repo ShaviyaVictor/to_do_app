@@ -151,6 +151,17 @@ const toDoSlice = createSlice({
       );
       state[index].completed = action.payload.completed;
     },
+    
+    // delete action reducer 
+    [deleteTodoAsync.pending]: (state, action) => {
+      console.log('AT WORK: The actioning is in progress...')
+    },
+    [deleteTodoAsync.fulfilled]: (state, action) => {
+      console.log('SUCCESS; The todo item has been deleted.');
+      return state.filter(
+        (todo) => todo.id !== action.payload.id
+      );
+    }
 
   },
 
