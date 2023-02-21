@@ -90,6 +90,7 @@ const toDoSlice = createSlice({
   
   name: 'todos',
   initialState: [
+    // these have been left as dummy to allow users to see some data 
     { id: 1, title: 'Todo1', completed: false },
     { id: 2, title: 'Todo2', completed: true },
     { id: 3, title: 'Todo3', completed: false },
